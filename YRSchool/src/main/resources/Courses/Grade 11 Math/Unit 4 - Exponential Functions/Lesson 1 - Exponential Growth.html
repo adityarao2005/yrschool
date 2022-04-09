@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+	<h1>Exponential Growth</h1>
+
+	e.g) A bacteria culture starts with 100 bacteria and every hour they
+	double in size. Observe the trends. a) Make a table to show population
+	in 4 hours
+	<table>
+		<tr>
+			<th>x - hour</th>
+			<th>y - bacteria</th>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>200</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>400</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>800</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>1600</td>
+		</tr>
+	</table>
+	b) Calculate finite differences.
+	
+	<table>
+		<tr><th>Hours</th><th>Population</th><th>1st difference</th><th>2nd difference</th></tr>
+		<tr><td>0</td><td>100</td><td style="background-color:black"></td><td style="background-color:black"></td></tr>
+		<tr><td>1</td><td>200</td><td>100</td><td style="background-color:black"></td></tr>
+		<tr><td>2</td><td>400</td><td>200</td><td>100</td></tr>
+		<tr><td>3</td><td>800</td><td>400</td><td>200</td></tr>
+		<tr><td>4</td><td>1600</td><td>800</td><td>400</td></tr>
+	</table>
+	
+	c) Graph the relation
+
+	<div class="chart-container"
+		style="position: relative; width: 300px">
+		<canvas id="myChart"></canvas>
+	</div>
+	
+	Whats the trend?<br>
+	Its all repeating the differences, and its increasing its value by multiplying two. <b>Lets make an equation</b>
+	<br><pre style="font-family: Calibria Math"> y = 100(2)<sup style="font-family: Calibria Math">x</sup></pre>
+	This is the equation for the bacteria, it is a type of exponential growth. But this doesnt account for any exponential growth. Lets make the general formula, like from functions transformations.
+	<br>
+	From: <pre style="font-family: Cambria Math"> y = a<i>f</i>(dx - e) + c</pre>
+	The equation is:
+	<pre style="font-family: Cambria Math"> y = a(b<sup style="font-family: Cambria Math">dx - e</sup>) + c</pre>
+	Where:
+	<ul>
+		<li>a is the coefficient to the exponent</li>
+		<li>b is the base of the exponent and b < 1</li>
+		<li>c is the vertical translation of the asymptote</li>
+		<li>d is the coefficient of x</li>
+		<li>e is the horizontal translation of x</li>
+		<li>f(x) = b<sup>x</sup></li>
+	</ul>
+	<pre>
+	Lets Practice:
+	Solve for the asymptote
+		1) 2(y - 3) = 3<sup>x</sup> + 5
+		2) 3y = 3<sup>x</sup> + 1
+		3) y = 2(3<sup>2x+1</sup>) - 2
+	</pre>
+	<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var x = new Chart(document.getElementById("myChart"), {
+	   type: 'scatter',
+	   data: {
+	      datasets: [{
+	         label: "Bacteria per hour",
+	         data: [{
+	            x: 0,
+	            y: 100
+	         }, {
+	            x: 1,
+	            y: 200
+	         }, {
+	            x: 2,
+	            y: 400
+	         }, {
+	            x: 3,
+	            y: 800
+	         }, {
+		            x: 4,
+		            y: 1600
+		         }],
+	      }]
+	   },
+	   options: {
+	   }
+	});
+	</script>
+</body>
+</html>
