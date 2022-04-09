@@ -8,11 +8,19 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yrhacks.apps.yrschool.UnitController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0"
+	style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 84.3511%, #0000005d 0.0%, #0000005d 12.7517%, #ffffff 36.0179%, #ff9f2ad1 94.7236%, #ff9f2ad1 100.0%);"
+	xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.yrhacks.apps.yrschool.UnitController">
 	<children>
-		<ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+		<ToolBar prefHeight="40.0" prefWidth="200.0"
+			style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 84.3511%, #0000005d 0.0%, #0000005d 12.7517%, #ffffff 36.0179%, #ff9f2ad1 94.7236%, #ff9f2ad1 100.0%);"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
 			<items>
-				<Button mnemonicParsing="false" onAction="#moveToCourse" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100;">
+				<Button mnemonicParsing="false" onAction="#moveToCourse"
+					prefHeight="30.0" prefWidth="30.0"
+					style="-fx-background-radius: 100;">
 					<graphic>
 						<Group>
 							<children>
@@ -25,7 +33,12 @@
 				</Button>
 			</items>
 		</ToolBar>
-		<TreeView fx:id="treeView" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0" />
-		<WebView fx:id="webView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+		<TreeView fx:id="treeView" prefWidth="200.0"
+			style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 84.3511%, #0000005d 0.0%, #0000005d 12.7517%, #ffffff 36.0179%, #ff9f2ad1 94.7236%, #ff9f2ad1 100.0%);"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.topAnchor="40.0" />
+		<WebView fx:id="webView" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="40.0" />
 	</children>
 </AnchorPane>
