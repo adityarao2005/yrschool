@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yrhacks.apps.yrschool.UnitController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0"
+	xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.yrhacks.apps.yrschool.CourseController">
 	<children>
-		<ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+		<ToolBar prefHeight="40.0" prefWidth="200.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
 			<items>
-				<Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100;">
+				<Button mnemonicParsing="false" prefHeight="30.0"
+					prefWidth="30.0" style="-fx-background-radius: 100;" onAction="#moveToMain">
 					<graphic>
 						<Group>
 							<children>
@@ -27,53 +31,12 @@
 				</Button>
 			</items>
 		</ToolBar>
-      <BorderPane layoutX="250.0" layoutY="103.0" prefHeight="100.0" prefWidth="203.0" />
-      <BorderPane layoutX="16.0" layoutY="285.0" prefHeight="78.0" prefWidth="200.0">
-         <center>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="G9 Academic Math" BorderPane.alignment="CENTER">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-         </center>
-      </BorderPane>
-      <BorderPane layoutX="14.0" layoutY="350.0" prefHeight="78.0" prefWidth="203.0">
-         <center>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="G12 Data Management" BorderPane.alignment="CENTER">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-         </center>
-      </BorderPane>
-      <BorderPane layoutX="249.0" layoutY="350.0" prefHeight="78.0" prefWidth="191.0">
-         <center>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="G12 Advanced Functions" BorderPane.alignment="CENTER">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-         </center>
-      </BorderPane>
-      <Text layoutX="528.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G11 Functions">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <BorderPane layoutX="479.0" layoutY="350.0" prefHeight="78.0" prefWidth="206.0">
-         <center>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="G12 Calculus and Vectors" BorderPane.alignment="CENTER">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-         </center>
-      </BorderPane>
-      <Text layoutX="262.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G10 Academic Math">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="199.0" fitWidth="565.0" layoutX="62.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+		<TilePane hgap="20.0" prefHeight="200.0" prefWidth="200.0"
+			vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" fx:id="tiles">
+			<padding>
+				<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+			</padding>
+		</TilePane>
 	</children>
 </AnchorPane>
