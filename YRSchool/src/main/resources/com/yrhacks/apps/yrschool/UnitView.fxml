@@ -7,13 +7,18 @@
 <?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yrhacks.apps.yrschool.UnitController">
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18"
+	fx:controller="com.yrhacks.apps.yrschool.UnitController">
 	<children>
-		<ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+		<ToolBar prefHeight="40.0" prefWidth="200.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
 			<items>
-				<Button onAction="#moveToCourse" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100;">
+				<Button mnemonicParsing="false" prefHeight="30.0"
+					prefWidth="30.0" style="-fx-background-radius: 100;">
 					<graphic>
 						<Group>
 							<children>
@@ -26,10 +31,12 @@
 				</Button>
 			</items>
 		</ToolBar>
-		<TreeView prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0" />
-		<ScrollPane fitToWidth="true" layoutX="200.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
-         <content>
-            <WebView prefHeight="200.0" prefWidth="200.0" />
-         </content></ScrollPane>
+		<TreeView prefWidth="200.0"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.topAnchor="40.0" />
+		<ScrollPane fitToWidth="true" layoutX="200.0"
+			layoutY="41.0" prefHeight="200.0" prefWidth="200.0"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
 	</children>
 </AnchorPane>
