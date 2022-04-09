@@ -3,9 +3,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.shape.Line?>
 
@@ -14,11 +15,12 @@
 	fx:controller="com.yrhacks.apps.yrschool.CourseController">
 	<children>
 		<ToolBar prefHeight="40.0" prefWidth="200.0"
-			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-			AnchorPane.topAnchor="0.0">
+			style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<items>
-				<Button mnemonicParsing="false" prefHeight="30.0"
-					prefWidth="30.0" style="-fx-background-radius: 100;" onAction="#moveToMain">
+				<Button mnemonicParsing="false" onAction="#moveToMain"
+					prefHeight="30.0" prefWidth="30.0"
+					style="-fx-background-radius: 100; -fx-border-color: grey; -fx-border-radius: 100;">
 					<graphic>
 						<Group>
 							<children>
@@ -28,15 +30,26 @@
 							</children>
 						</Group>
 					</graphic>
+					<effect>
+						<DropShadow blurType="GAUSSIAN" height="8.0"
+							radius="3.5" width="8.0" />
+					</effect>
 				</Button>
 			</items>
 		</ToolBar>
-		<TilePane hgap="20.0" prefHeight="200.0" prefWidth="200.0"
-			vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" fx:id="tiles">
-			<padding>
-				<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-			</padding>
-		</TilePane>
+		<ScrollPane fitToWidth="true" layoutY="40.0"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+			<content>
+				<TilePane fx:id="tiles" hgap="20.0" prefHeight="460.0"
+					prefWidth="684.0"
+					style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 84.3511%, #0000005d 0.0%, #0000005d 12.7517%, #ffffff 36.0179%, #ff9f2ad1 94.7236%, #ff9f2ad1 100.0%);"
+					vgap="20.0">
+					<padding>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</padding>
+				</TilePane>
+			</content>
+		</ScrollPane>
 	</children>
 </AnchorPane>
