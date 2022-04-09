@@ -16,8 +16,8 @@ public class CourseController {
 
 	@FXML
 	private void initialize() throws IOException, URISyntaxException {
-		System.out.println(App.class.getProtectionDomain().getCodeSource().getLocation());
-		BufferedReader reader = new BufferedReader(new InputStreamReader(new File(new File(App.appDir.toURI()), "Courses").toURI().toURL().openStream()));
+		BufferedReader reader = new BufferedReader(
+				new InputStreamReader(new File(new File(App.appDir.toURI()), "Courses").toURI().toURL().openStream()));
 
 		reader.lines().forEach((e) -> {
 			Tile tile = new Tile();

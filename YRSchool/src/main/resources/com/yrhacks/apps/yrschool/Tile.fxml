@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Region?>
 
-
-<fx:root prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-background-color: lightblue;" type="BorderPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" onMouseClicked="#clicked">
-   <center>
-      <Label fx:id="text" text="Label" BorderPane.alignment="CENTER" />
-   </center>
-   <top>
-      <Region prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: rgba(255, 25, 25, 50); -fx-background-radius: 20 20 0 0;" BorderPane.alignment="CENTER" />
-   </top>
-   <bottom>
-      <Region prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: rgba(25, 225, 25, 75); -fx-background-radius: 0 0 20 20;" BorderPane.alignment="CENTER" />
-   </bottom>
+<fx:root onMouseClicked="#clicked" prefHeight="200.0"
+	prefWidth="200.0"
+	style="-fx-background-radius: 20; -fx-background-color: lightblue;"
+	type="BorderPane" xmlns="http://javafx.com/javafx/18"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<center>
+		<Label fx:id="text" text="Label" BorderPane.alignment="CENTER" />
+	</center>
+	<top>
+		<Region prefHeight="20.0" prefWidth="200.0"
+			style="-fx-background-color: rgba(255, 25, 25, 50); -fx-background-radius: 20 20 0 0;"
+			BorderPane.alignment="CENTER" />
+	</top>
+	<bottom>
+		<Region prefHeight="20.0" prefWidth="200.0"
+			style="-fx-background-color: rgba(25, 225, 25, 75); -fx-background-radius: 0 0 20 20;"
+			BorderPane.alignment="CENTER" />
+	</bottom>
+	<effect>
+		<DropShadow />
+	</effect>
 </fx:root>
