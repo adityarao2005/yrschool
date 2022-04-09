@@ -6,13 +6,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.stream.Collectors;
 
 /**
  * JavaFX App
@@ -50,8 +55,22 @@ public class App extends Application {
 		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
 		return fxmlLoader.load();
 	}
-	
+
 	public static final URL appDir = App.class.getProtectionDomain().getCodeSource().getLocation();
+
+	public static URL getResource(String path) throws MalformedURLException, URISyntaxException {
+		return new File(new File(App.appDir.toURI()), path).toURI().toURL();
+	}
+
+	public static List<URL> getResources(String path) throws MalformedURLException, URISyntaxException {
+		return Arrays.stream(new File(new File(App.appDir.toURI()), path).listFiles()).map(File::toURI).map(t -> {
+			try {
+				return t.toURL();
+			} catch (MalformedURLException e) {
+				throw new RuntimeException(e);
+			}
+		}).collect(Collectors.toList());
+	}
 
 	public static void main(String[] args) {
 		launch();
