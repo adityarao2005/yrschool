@@ -10,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yrhacks.apps.yrschool.UnitController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yrhacks.apps.yrschool.CourseController">
 	<children>
 		<ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<items>
-				<Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100;">
+				<Button onAction="#moveToMain" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100;">
 					<graphic>
 						<Group>
 							<children>

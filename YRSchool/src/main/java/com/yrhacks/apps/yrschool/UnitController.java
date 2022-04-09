@@ -4,11 +4,10 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 
-public class MainController {
+public class UnitController {
 
-	
 	@FXML
-	public void moveToCourses() throws IOException {
+	public void moveToCourse() throws IOException {
 		App.setRoot("CourseView");
 	}
 }
